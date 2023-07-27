@@ -5,9 +5,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
-
-import com.artifex.mupdf.viewer.DocumentActivity;
-import com.hanlyjiang.library.fileviewer.tbs.TBSFileViewActivity;
 import com.hanlyjiang.library.utils.FileViewerUtils;
 
 import java.io.File;
@@ -73,7 +70,7 @@ public class FileViewer {
         }
 
         if (isTBSSupportFile(format)) {
-            TBSFileViewActivity.viewFile(context, filePath);
+//            TBSFileViewActivity.viewFile(context, filePath);
             log(format + " ： TBS默认支持文件类型，使用TBS浏览");
             return OpenResult.success();
         }
@@ -92,10 +89,10 @@ public class FileViewer {
     }
 
     public static void startMuPDFActivityByUri(Context context, Uri documentUri) {
-        Intent intent = new Intent(context, DocumentActivity.class);
-        intent.setAction(Intent.ACTION_VIEW);
-        intent.setData(documentUri);
-        context.startActivity(intent);
+//        Intent intent = new Intent(context, DocumentActivity.class);
+//        intent.setAction(Intent.ACTION_VIEW);
+//        intent.setData(documentUri);
+//        context.startActivity(intent);
     }
 
     /**
